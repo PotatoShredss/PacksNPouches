@@ -1,0 +1,9 @@
+{
+  "replace": "false",
+  "values": ["thca:knapsack", "thca:bookbag",
+    "thca:clothbag", "thca:daybag",
+    "thca:drawstringbag","thca:handmadeknapsack",
+    "thca:hikingpack","thca:leatherbag",
+    "thca:militarybag","thca:reinforcedleatherbag",
+    "thca:specopsbag","thca:toolbox"]
+}
