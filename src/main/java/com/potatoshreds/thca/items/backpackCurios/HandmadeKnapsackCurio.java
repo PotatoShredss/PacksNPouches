@@ -1,8 +1,7 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.potatoshreds.thca.thca;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -17,9 +16,9 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class KnapsackCurio extends Item{
-    public KnapsackCurio() {
-        super(new Item.Properties().stacksTo(1).defaultDurability(0));
+public class HandmadeKnapsackCurio extends Item{
+    public HandmadeKnapsackCurio() {
+        super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
     public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag unused) {
@@ -38,7 +37,7 @@ public class KnapsackCurio extends Item{
 
                 Attribute slots = ModAttributes.SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,15, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,5, AttributeModifier.Operation.ADDITION,"back");
 
 
                 return atts;

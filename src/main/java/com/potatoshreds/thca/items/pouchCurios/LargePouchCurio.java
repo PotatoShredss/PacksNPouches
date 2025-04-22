@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.pouchCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -15,6 +15,8 @@ import top.theillusivec4.curios.api.type.capability.ICurio;
 import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
+
+import static com.potatoshreds.thca.Config.largePouchSlots;
 
 public class LargePouchCurio extends Item{
     public LargePouchCurio() {
@@ -37,7 +39,7 @@ public class LargePouchCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, hslots,"hotbarslotsM",uuid,2, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, hslots,"hotbarslotsM",uuid, largePouchSlots, AttributeModifier.Operation.ADDITION,"belt");
 
 
                 return atts;

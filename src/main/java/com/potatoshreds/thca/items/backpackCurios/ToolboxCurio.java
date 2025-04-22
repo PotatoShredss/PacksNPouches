@@ -1,8 +1,11 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
@@ -16,8 +19,11 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class ToolBeltCurio extends Item{
-    public ToolBeltCurio() {
+import static com.potatoshreds.thca.Config.toolBoxSlots;
+import static com.potatoshreds.thca.Config.toolBoxStorage;
+
+public class ToolboxCurio extends Item{
+    public ToolboxCurio() {
         super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
@@ -29,17 +35,22 @@ public class ToolBeltCurio extends Item{
             }
 
             public void curioTick(SlotContext slotContext){
+                LivingEntity user = slotContext.entity();
 
+                if(!user.level().isClientSide() && user.tickCount % 120 == 0){
+                    user.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,180,1,false,false,false));
+                }
             }
 
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext sc, UUID uuid){
                 Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
+                Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack,hslots,"hotbarslotsSP",uuid,4, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,toolBoxStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addSlotModifier(stack, "belt", "SPslots", uuid, -1, AttributeModifier.Operation.ADDITION, "belt");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, toolBoxSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

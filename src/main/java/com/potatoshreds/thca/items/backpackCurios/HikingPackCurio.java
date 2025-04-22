@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -15,6 +15,9 @@ import top.theillusivec4.curios.api.type.capability.ICurio;
 import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
+
+import static com.potatoshreds.thca.Config.hikingPackSlots;
+import static com.potatoshreds.thca.Config.hikingPackStorage;
 
 public class HikingPackCurio extends Item{
     public HikingPackCurio() {
@@ -38,9 +41,9 @@ public class HikingPackCurio extends Item{
                 Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,21, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots", uuid, hikingPackStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, 3, AttributeModifier.Operation.ADDITION, "back");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, hikingPackSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

@@ -19,29 +19,107 @@ public class Config
 {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
-    private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
-            .comment("Whether to log the dirt block on common setup")
-            .define("logDirtBlock", true);
+    private static final ForgeConfigSpec.IntValue HIKINGPACK_STORAGE = BUILDER
+            .comment("How much additional storage the Hiking Pack gives(INTEGERS ONLY)")
+            .defineInRange("hikingPackStorage", 21, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue HIKINGPACK_SLOTS = BUILDER
+            .comment("How many additional hotbar slots the Hiking Pack gives(INTEGERS ONLY)")
+            .defineInRange("hikingPackSlots", 3, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue BOOKBAG_STORAGE = BUILDER
+            .comment("How much additional storage the Book Bag gives(INTEGERS ONLY)")
+            .defineInRange("bookBagStorage", 12, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue BOOKBAG_SLOTS = BUILDER
+            .comment("How many additional hotbar slots the Book Bag gives(INTEGERS ONLY)")
+            .defineInRange("bookBagSlots", 1, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue DAYBAG_STORAGE = BUILDER
+            .comment("How much additional storage the Day Bag gives(INTEGERS ONLY)")
+            .defineInRange("dayBagStorage", 14, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue DAYBAG_SLOTS = BUILDER
+            .comment("How many additional hotbar slots the Day Bag gives(INTEGERS ONLY)")
+            .defineInRange("dayBagSlots", 2, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue SPECOPSBAG_STORAGE = BUILDER
+            .comment("How much additional storage the Spec-Ops Bag gives(INTEGERS ONLY)")
+            .defineInRange("specOpsBagStorage", 27, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue SPECOPSBAG_SLOTS = BUILDER
+            .comment("How many additional hotbar slots the Spec-Ops Bag gives(INTEGERS ONLY)")
+            .defineInRange("specOpsBagSlots", 3, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TOOLBOX_STORAGE = BUILDER
+            .comment("How much additional storage the Tool Box gives(INTEGERS ONLY)")
+            .defineInRange("toolBoxStorage", 27, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TOOLBOX_SLOTS = BUILDER
+            .comment("How many additional hotbar slots the Tool Box gives(INTEGERS ONLY)")
+            .defineInRange("toolBoxSlots", 3, 0, Integer.MAX_VALUE);
 
-    private static final ForgeConfigSpec.IntValue MAGIC_NUMBER = BUILDER
-            .comment("A magic number")
-            .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue DRAWSTRINGBAG_STORAGE = BUILDER
+        .comment("How much additional storage the Drawstring Bag gives(INTEGERS ONLY)")
+        .defineInRange("drawstringBagStorage", 9, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue CLOTHBAG_STORAGE = BUILDER
+        .comment("How much additional storage the Cloth Bag gives(INTEGERS ONLY)")
+        .defineInRange("clothBagStorage", 9, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue HANDMADEKNAPSACK_STORAGE = BUILDER
+        .comment("How much additional storage the Handmade Knapsack gives(INTEGERS ONLY)")
+        .defineInRange("handMadeKnapsackStorage", 5, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue KNAPSACK_STORAGE = BUILDER
+        .comment("How much additional storage the Knapsack gives(INTEGERS ONLY)")
+        .defineInRange("knapsackStorage", 15, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue LEATHERBAG_STORAGE = BUILDER
+        .comment("How much additional storage the Leather Bag gives(INTEGERS ONLY)")
+        .defineInRange("leatherBagStorage", 15, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue MILITARYBAG_STORAGE = BUILDER
+        .comment("How much additional storage the  gives(INTEGERS ONLY)")
+        .defineInRange("militaryBagStorage", 27, 0, Integer.MAX_VALUE);
 
-    public static final ForgeConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
-            .comment("What you want the introduction message to be for the magic number")
-            .define("magicNumberIntroduction", "The magic number is... ");
+    private static final ForgeConfigSpec.IntValue LARGEPOUCH_SLOTS = BUILDER
+        .comment("How many additional hotbar slots the  gives(INTEGERS ONLY)")
+        .defineInRange("largePouchSlots", 2, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue SMALLPOUCH_SLOTS = BUILDER
+        .comment("How many additional hotbar slots the  gives(INTEGERS ONLY)")
+        .defineInRange("smallPouchSlots", 1, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TOOLBELT_SLOTS = BUILDER
+        .comment("How many additional hotbar slots the  gives(INTEGERS ONLY)")
+        .defineInRange("toolBeltSlots", 4, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TOOLBELT_RESTRICTION = BUILDER
+        .comment("How many belt slots the  adds/removes.(INTEGERS ONLY)" +
+        "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
+        .defineInRange("toolBeltRestriction", -1, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_SLOTS = BUILDER
+        .comment("How many additional hotbar slots the  gives(INTEGERS ONLY)")
+        .defineInRange("specOpsUtilityBeltSlots", 5, 0, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_RESTRICTION = BUILDER
+        .comment("How many belt slots the  adds/removes.(INTEGERS ONLY)" +
+        "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
+        .defineInRange("specOpsUtilityBeltRestriction", -1, 0, Integer.MAX_VALUE);
 
-    // a list of strings that are treated as resource locations for items
-    private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
-            .comment("A list of items to log on common setup.")
-            .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
-    public static boolean logDirtBlock;
-    public static int magicNumber;
-    public static String magicNumberIntroduction;
-    public static Set<Item> items;
+    //storage and slots variables for backpacks with both
+    public static int hikingPackStorage;
+    public static int hikingPackSlots;
+    public static int bookBagStorage;
+    public static int bookBagSlots;
+    public static int dayBagStorage;
+    public static int dayBagSlots;
+    public static int specOpsBagStorage;
+    public static int specOpsBagSlots;
+    public static int toolBoxStorage;
+    public static int toolBoxSlots;
+
+    //storage variables for backpacks with only storage
+    public static int drawstringBagStorage;
+    public static int clothBagStorage;
+    public static int handMadeKnapsackStorage;
+    public static int knapsackStorage;
+    public static int leatherBagStorage;
+    public static int militaryBagStorage;
+
+    //slots and belt restrictions for pouches
+    public static int largePouchSlots;
+    public static int smallPouchSlots;
+    public static int toolBeltSlots;
+    public static int toolBeltRestriction;
+    public static int specOpsUtilityBeltSlots;
+    public static int specOpsUtilityBeltRestriction;
 
     private static boolean validateItemName(final Object obj)
     {
@@ -51,13 +129,29 @@ public class Config
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
-        logDirtBlock = LOG_DIRT_BLOCK.get();
-        magicNumber = MAGIC_NUMBER.get();
-        magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
+        hikingPackStorage = HIKINGPACK_STORAGE.get();
+        hikingPackSlots = HIKINGPACK_SLOTS.get();
+        bookBagStorage = BOOKBAG_STORAGE.get();
+        bookBagSlots = BOOKBAG_SLOTS.get();
+        dayBagStorage = DAYBAG_STORAGE.get();
+        dayBagSlots = DAYBAG_SLOTS.get();
+        specOpsBagStorage = SPECOPSBAG_STORAGE.get();
+        specOpsBagSlots = SPECOPSBAG_SLOTS.get();
+        toolBoxStorage = TOOLBOX_STORAGE.get();
+        toolBoxSlots = TOOLBOX_SLOTS.get();
 
-        // convert the list of strings into a set of items
-        items = ITEM_STRINGS.get().stream()
-                .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
-                .collect(Collectors.toSet());
+        drawstringBagStorage = DRAWSTRINGBAG_STORAGE.get();
+        clothBagStorage = CLOTHBAG_STORAGE.get();
+        handMadeKnapsackStorage = HANDMADEKNAPSACK_STORAGE.get();
+        knapsackStorage = KNAPSACK_STORAGE.get();
+        leatherBagStorage = LEATHERBAG_STORAGE.get();
+        militaryBagStorage = MILITARYBAG_STORAGE.get();
+
+        largePouchSlots = LARGEPOUCH_SLOTS.get();
+        smallPouchSlots = SMALLPOUCH_SLOTS.get();
+        toolBeltSlots = TOOLBELT_SLOTS.get();
+        toolBeltRestriction = TOOLBELT_RESTRICTION.get();
+        specOpsUtilityBeltSlots = SPECOPSUTILITYBELT_SLOTS.get();
+        specOpsUtilityBeltRestriction = SPECOPSUTILITYBELT_RESTRICTION.get();
     }
 }

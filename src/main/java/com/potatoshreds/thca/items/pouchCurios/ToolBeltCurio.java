@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.pouchCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -16,8 +16,11 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class DrawstringBagCurio extends Item{
-    public DrawstringBagCurio() {
+import static com.potatoshreds.thca.Config.toolBeltRestriction;
+import static com.potatoshreds.thca.Config.toolBeltSlots;
+
+public class ToolBeltCurio extends Item{
+    public ToolBeltCurio() {
         super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
@@ -35,9 +38,11 @@ public class DrawstringBagCurio extends Item{
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext sc, UUID uuid){
                 Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
-                Attribute slots = ModAttributes.SLOTS.get();
+                Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,9, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack,hslots,"hotbarslotsSP",uuid,toolBeltSlots, AttributeModifier.Operation.ADDITION,"belt");
+
+                CuriosApi.addSlotModifier(stack, "belt", "SPslots", uuid, toolBeltRestriction, AttributeModifier.Operation.ADDITION, "belt");
 
                 return atts;
             }

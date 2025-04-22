@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;

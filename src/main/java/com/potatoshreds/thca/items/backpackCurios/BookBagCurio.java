@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -16,9 +16,12 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class SpecOpsUtilityBeltCurio extends Item{
-    public SpecOpsUtilityBeltCurio() {
-        super(new Item.Properties().stacksTo(1).defaultDurability(0));
+import static com.potatoshreds.thca.Config.bookBagSlots;
+import static com.potatoshreds.thca.Config.bookBagStorage;
+
+public class BookBagCurio extends Item{
+    public BookBagCurio() {
+        super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
     public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag unused) {
@@ -35,11 +38,12 @@ public class SpecOpsUtilityBeltCurio extends Item{
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext sc, UUID uuid){
                 Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
+                Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack,hslots,"hotbarslotsSP",uuid,5, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid, bookBagStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addSlotModifier(stack, "belt", "SPslots", uuid, -1, AttributeModifier.Operation.ADDITION, "belt");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, bookBagSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

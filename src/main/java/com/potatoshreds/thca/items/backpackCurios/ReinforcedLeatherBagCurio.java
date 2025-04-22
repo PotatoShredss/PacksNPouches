@@ -1,11 +1,8 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
@@ -19,8 +16,8 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class ToolboxCurio extends Item{
-    public ToolboxCurio() {
+public class ReinforcedLeatherBagCurio extends Item{
+    public ReinforcedLeatherBagCurio() {
         super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
@@ -32,11 +29,7 @@ public class ToolboxCurio extends Item{
             }
 
             public void curioTick(SlotContext slotContext){
-                LivingEntity user = slotContext.entity();
 
-                if(!user.level().isClientSide() && user.tickCount % 120 == 0){
-                    user.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,180,1,false,false,false));
-                }
             }
 
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext sc, UUID uuid){
@@ -45,9 +38,9 @@ public class ToolboxCurio extends Item{
                 Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,24, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,22, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, 3, AttributeModifier.Operation.ADDITION, "back");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, 2, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

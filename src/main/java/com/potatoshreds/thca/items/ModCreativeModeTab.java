@@ -14,15 +14,9 @@ public class ModCreativeModeTab {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, thca.MODID);
 
     public static final RegistryObject<CreativeModeTab> THCATAB = CREATIVETAB.register("thca",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(THCAItems.NINEMM.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(THCAItems.HIKINGPACK.get()))
                     .title(Component.translatable("creativetab.thca"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(THCAItems.NINEMM.get());
-                        pOutput.accept(THCAItems.SEVENSIXTWO.get());
-                        pOutput.accept(THCAItems.FIVEFIVESIX.get());
-                        pOutput.accept(THCAItems.MUSKETBALL.get());
-                        pOutput.accept(THCAItems.TWELVEGAUGE.get());
-                        pOutput.accept(THCAItems.ACP.get());
                         pOutput.accept(THCAItems.SMALLPOUCH.get());
                         pOutput.accept(THCAItems.LARGEPOUCH.get());
                         pOutput.accept(THCAItems.KNAPSACK.get());

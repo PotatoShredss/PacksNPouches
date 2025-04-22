@@ -1,4 +1,4 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -16,8 +16,11 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 
 import java.util.UUID;
 
-public class ClothBagCurio extends Item{
-    public ClothBagCurio() {
+import static com.potatoshreds.thca.Config.specOpsBagSlots;
+import static com.potatoshreds.thca.Config.specOpsBagStorage;
+
+public class SpecOpsBagCurio extends Item{
+    public SpecOpsBagCurio() {
         super(new Properties().stacksTo(1).defaultDurability(0));
     }
 
@@ -36,9 +39,11 @@ public class ClothBagCurio extends Item{
                 Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
                 Attribute slots = ModAttributes.SLOTS.get();
+                Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,9, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,specOpsBagStorage, AttributeModifier.Operation.ADDITION,"back");
 
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, specOpsBagSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

@@ -1,33 +1,23 @@
-package com.potatoshreds.thca.items;
+package com.potatoshreds.thca.items.backpackCurios;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.potatoshreds.thca.thca;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import nuparu.tinyinv.init.ModAttributes;
-import org.w3c.dom.Attr;
-import top.theillusivec4.curios.Curios;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurio;
-import top.theillusivec4.curios.api.type.capability.ICurioItem;
 import top.theillusivec4.curios.common.capability.CurioItemCapability;
-
-import nuparu.tinyinv.init.ModAttributes.*;
 
 import java.util.UUID;
 
-public class SmallPouchCurio extends Item{
-    public SmallPouchCurio() {
+public class KnapsackCurio extends Item{
+    public KnapsackCurio() {
         super(new Item.Properties().stacksTo(1).defaultDurability(0));
     }
 
@@ -45,9 +35,9 @@ public class SmallPouchCurio extends Item{
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext sc, UUID uuid){
                 Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
-                Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
+                Attribute slots = ModAttributes.SLOTS.get();
 
-                CuriosApi.addModifier(stack, hslots,"hotbarslotsS",uuid,1, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,15, AttributeModifier.Operation.ADDITION,"back");
 
 
                 return atts;
