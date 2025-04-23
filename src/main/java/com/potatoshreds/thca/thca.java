@@ -3,8 +3,7 @@ package com.potatoshreds.thca;
 import com.mojang.logging.LogUtils;
 import com.potatoshreds.thca.items.ModCreativeModeTab;
 import com.potatoshreds.thca.items.THCAItems;
-import com.potatoshreds.thca.renderer.packRenderer;
-import com.potatoshreds.thca.renderer.pouchRenderer;
+import com.potatoshreds.thca.renderer.CurioRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,7 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 
 
@@ -54,9 +52,7 @@ public class thca {
     }
 
     private void clientSetup(final FMLClientSetupEvent evt){
-        CuriosRendererRegistry.register(THCAItems.HIKINGPACK.get(), packRenderer::new);
-        CuriosRendererRegistry.register(THCAItems.KNAPSACK.get(), packRenderer::new);
-        CuriosRendererRegistry.register(THCAItems.SMALLPOUCH.get(), pouchRenderer::new);
+        CurioRegistry.registerCurios();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

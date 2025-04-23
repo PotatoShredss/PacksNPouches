@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.client.ICurioRenderer;
 
-public class beltRenderer implements ICurioRenderer {
+public class PackRenderer implements ICurioRenderer{
     @Override
     public <T extends LivingEntity, M extends EntityModel<T>> void render(
             ItemStack itemStack,
@@ -33,8 +33,8 @@ public class beltRenderer implements ICurioRenderer {
             poseStack.pushPose();
             ICurioRenderer.translateIfSneaking(poseStack, entity);
             ICurioRenderer.rotateIfSneaking(poseStack, entity);
-            //poseStack.mulPose(Axis.ZP.rotationDegrees(180));
-            //poseStack.translate(0,0.5,0.625);
+            poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+            poseStack.translate(0,0.5,0.625);
             Minecraft.getInstance().getItemRenderer().renderStatic(
                     itemStack, ItemDisplayContext.HEAD, lightV, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, entity.level(), 0
             );
