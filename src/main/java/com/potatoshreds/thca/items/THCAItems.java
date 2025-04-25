@@ -17,7 +17,7 @@ public class THCAItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, thca.MODID);
     public static final RegistryObject<Item> SMALLPOUCH = ITEMS.register("smallpouch", SmallPouchCurio::new);
     public static final RegistryObject<Item> LARGEPOUCH = ITEMS.register("largepouch", LargePouchCurio::new);
-    public  static final RegistryObject<Item> KNAPSACK = ITEMS.register("knapsack", KnapsackCurio::new);
+    public static final RegistryObject<Item> KNAPSACK = ITEMS.register("knapsack", KnapsackCurio::new);
     public static final RegistryObject<Item> BOOKBAG = ITEMS.register("bookbag", BookBagCurio::new);
     public static final RegistryObject<Item> CLOTHBAG = ITEMS.register("clothbag", ClothBagCurio::new);
     public static final RegistryObject<Item> DAYBAG = ITEMS.register("daybag", DayBagCurio::new);

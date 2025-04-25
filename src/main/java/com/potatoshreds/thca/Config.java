@@ -81,14 +81,14 @@ public class Config
     private static final ForgeConfigSpec.IntValue TOOLBELT_RESTRICTION = BUILDER
         .comment("How many belt slots the  adds/removes.(INTEGERS ONLY)" +
         "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
-        .defineInRange("toolBeltRestriction", -1, 0, Integer.MAX_VALUE);
+        .defineInRange("toolBeltRestriction", -1, -2, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_SLOTS = BUILDER
         .comment("How many additional hotbar slots the  gives(INTEGERS ONLY)")
         .defineInRange("specOpsUtilityBeltSlots", 5, 0, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_RESTRICTION = BUILDER
         .comment("How many belt slots the  adds/removes.(INTEGERS ONLY)" +
         "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
-        .defineInRange("specOpsUtilityBeltRestriction", -1, 0, Integer.MAX_VALUE);
+        .defineInRange("specOpsUtilityBeltRestriction", -1, -2, Integer.MAX_VALUE);
 
 
     static final ForgeConfigSpec SPEC = BUILDER.build();

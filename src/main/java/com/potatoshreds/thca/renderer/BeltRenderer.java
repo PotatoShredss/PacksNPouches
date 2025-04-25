@@ -1,6 +1,7 @@
 package com.potatoshreds.thca.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -32,8 +33,8 @@ public class BeltRenderer implements ICurioRenderer {
             poseStack.pushPose();
             ICurioRenderer.translateIfSneaking(poseStack, entity);
             ICurioRenderer.rotateIfSneaking(poseStack, entity);
-            //poseStack.mulPose(Axis.ZP.rotationDegrees(180));
-            //poseStack.translate(0,0.5,0.625);
+            poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+            poseStack.translate(0,-0.125,0.375);
             Minecraft.getInstance().getItemRenderer().renderStatic(
                     itemStack, ItemDisplayContext.HEAD, lightV, OverlayTexture.NO_OVERLAY, poseStack, multiBufferSource, entity.level(), 0
             );
