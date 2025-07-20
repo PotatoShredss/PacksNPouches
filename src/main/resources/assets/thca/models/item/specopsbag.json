@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "specopsbag",
-		"particle": "specopsbag"
+		"0": "thca:item/specopsbag",
+		"particle": "thca:item/specopsbag"
 	},
 	"elements": [
 		{
