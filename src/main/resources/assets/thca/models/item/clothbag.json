@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "thca:item/drawstringbag",
-		"particle": "thca:item/drawstringbag"
+		"0": "thca:item/clothbag",
+		"particle": "thca:item/clothbag"
 	},
 	"elements": [
 		{
