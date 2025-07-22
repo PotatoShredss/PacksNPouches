@@ -34,6 +34,8 @@ public class ModCreativeModeTab {
                         pOutput.accept(THCAItems.SPECOPSUTILITYBELT.get());
                         pOutput.accept(THCAItems.TOOLBELT.get());
                         pOutput.accept(THCAItems.TOOLBOX.get());
+                        pOutput.accept(THCAItems.CATBAG.get());
+                        pOutput.accept(THCAItems.CATPOUCH.get());
                     }).build());
     public static void register(IEventBus eb){
         CREATIVETAB.register(eb);

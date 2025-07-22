@@ -2,10 +2,7 @@ package com.potatoshreds.thca.items;
 
 
 import com.potatoshreds.thca.items.backpackCurios.*;
-import com.potatoshreds.thca.items.pouchCurios.LargePouchCurio;
-import com.potatoshreds.thca.items.pouchCurios.SmallPouchCurio;
-import com.potatoshreds.thca.items.pouchCurios.SpecOpsUtilityBeltCurio;
-import com.potatoshreds.thca.items.pouchCurios.ToolBeltCurio;
+import com.potatoshreds.thca.items.pouchCurios.*;
 import com.potatoshreds.thca.thca;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +28,8 @@ public class THCAItems {
     public static final RegistryObject<Item> SPECOPSUTILITYBELT = ITEMS.register("specopsutilitybelt", SpecOpsUtilityBeltCurio::new);
     public static final RegistryObject<Item> TOOLBELT = ITEMS.register("toolbelt", ToolBeltCurio::new);
     public static final RegistryObject<Item> TOOLBOX = ITEMS.register("toolbox", ToolboxCurio::new);
+    public static final RegistryObject<Item> CATBAG = ITEMS.register("catbag", CatBagCurio::new);
+    public static final RegistryObject<Item> CATPOUCH = ITEMS.register("catpouch", CatPouchCurio::new);
     public static void register(IEventBus eB){
         ITEMS.register(eB);
     }
