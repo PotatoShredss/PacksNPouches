@@ -10,6 +10,7 @@ public class CurioRegistry {
         CuriosRendererRegistry.register(THCAItems.LARGEPOUCH.get(), PouchRenderer::new);
         CuriosRendererRegistry.register(THCAItems.TOOLBELT.get(), BeltRenderer::new);
         CuriosRendererRegistry.register(THCAItems.SPECOPSUTILITYBELT.get(), BeltRenderer::new);
+        CuriosRendererRegistry.register(THCAItems.CATPOUCH.get(), PouchRenderer::new);
 
         CuriosRendererRegistry.register(THCAItems.HIKINGPACK.get(), PackRenderer::new);
         CuriosRendererRegistry.register(THCAItems.KNAPSACK.get(), PackRenderer::new);
