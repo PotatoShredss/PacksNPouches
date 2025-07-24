@@ -87,19 +87,18 @@ public class Config
         .defineInRange("toolBeltSlots", 4, 0, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue TOOLBELT_RESTRICTION = BUILDER
         .comment("How many belt slots the toolbelt adds/removes.(INTEGERS ONLY)" +
-        "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
-        .defineInRange("toolBeltRestriction", -1, -2, Integer.MAX_VALUE);
+            "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
+            .defineInRange("toolBeltRestriction", -1, -2, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_SLOTS = BUILDER
         .comment("How many additional hotbar slots the specops belt gives(INTEGERS ONLY)")
         .defineInRange("specOpsUtilityBeltSlots", 5, 0, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue SPECOPSUTILITYBELT_RESTRICTION = BUILDER
         .comment("How many belt slots the specops belt adds/removes.(INTEGERS ONLY)" +
-        "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
-        .defineInRange("specOpsUtilityBeltRestriction", -1, -2, Integer.MAX_VALUE);
+            "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
+            .defineInRange("specOpsUtilityBeltRestriction", -1, -2, Integer.MAX_VALUE);
     private static final ForgeConfigSpec.IntValue CATPOUCH_SLOTS = BUILDER
-            .comment("How many belt slots the specops belt adds/removes.(INTEGERS ONLY)" +
-                    "\n Note that this value should essentially always be negative or 0, as otherwise you will be able to equip infinite belts.")
-            .defineInRange("catPouchSlots", 3, 0, Integer.MAX_VALUE);
+        .comment("How many additional hotbar slots the cat pouch belt adds/removes.(INTEGERS ONLY)")
+        .defineInRange("catPouchSlots", 3, 0, Integer.MAX_VALUE);
 
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
