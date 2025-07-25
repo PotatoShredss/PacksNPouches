@@ -24,5 +24,6 @@ public class CurioRegistry {
         CuriosRendererRegistry.register(THCAItems.LEATHERBAG.get(), PackRenderer::new);
         CuriosRendererRegistry.register(THCAItems.MILITARYBAG.get(), PackRenderer::new);
         CuriosRendererRegistry.register(THCAItems.CATBAG.get(), PackRenderer::new);
+        CuriosRendererRegistry.register(THCAItems.REINFORCEDLEATHERBAG.get(), PackRenderer::new);
     }
 }

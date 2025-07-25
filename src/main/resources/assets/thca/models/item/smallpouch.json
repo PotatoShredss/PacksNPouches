@@ -158,6 +158,14 @@
 			"rotation": [16, 180, 0],
 			"translation": [0, 9.25, -5.25]
 		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [-1.75, 14.25, -1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 180, 0],
+			"translation": [-1.75, 14.25, -1]
+		},
 		"ground": {
 			"translation": [0, 13, 10.25],
 			"scale": [1.5, 1.57, 1.5]
