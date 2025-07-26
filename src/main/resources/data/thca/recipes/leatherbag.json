@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern":[
+    " # ",
+    "#o#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "o": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "thca:leatherbag"
+  }
+}
