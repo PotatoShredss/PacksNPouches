@@ -20,7 +20,6 @@ import top.theillusivec4.curios.common.capability.CurioItemCapability;
 import java.util.UUID;
 
 import static com.potatoshreds.ponpo.Config.catPouchSlots;
-import static com.potatoshreds.ponpo.Config.largePouchSlots;
 
 public class CatPouchCurio extends Item{
     public CatPouchCurio() {
