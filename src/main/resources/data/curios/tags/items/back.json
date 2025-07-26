@@ -1,9 +1,9 @@
 {
   "replace": "false",
-  "values": ["thca:knapsack", "thca:bookbag",
-    "thca:clothbag", "thca:daybag",
-    "thca:drawstringbag","thca:handmadeknapsack",
-    "thca:hikingpack","thca:leatherbag",
-    "thca:militarybag","thca:reinforcedleatherbag",
-    "thca:specopsbag","thca:toolbox", "thca:catbag"]
+  "values": ["ponpo:knapsack", "ponpo:bookbag",
+    "ponpo:clothbag", "ponpo:daybag",
+    "ponpo:drawstringbag","ponpo:handmadeknapsack",
+    "ponpo:hikingpack","ponpo:leatherbag",
+    "ponpo:militarybag","ponpo:reinforcedleatherbag",
+    "ponpo:specopsbag","ponpo:toolbox", "ponpo:catbag"]
 }

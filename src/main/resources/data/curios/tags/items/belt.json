@@ -1,5 +1,5 @@
 {
   "replace": "false",
-  "values": ["thca:smallpouch", "thca:largepouch", "thca:specopsutilitybelt","thca:toolbelt"
-              , "thca:catpouch"]
+  "values": ["ponpo:smallpouch", "ponpo:largepouch", "ponpo:specopsutilitybelt","ponpo:toolbelt"
+              , "ponpo:catpouch"]
 }

@@ -1,0 +1,21 @@
+{
+  "item.ponpo.smallpouch": "Small Pouch",
+  "item.ponpo.largepouch": "Large Pouch",
+  "item.ponpo.knapsack": "Knapsack",
+  "item.ponpo.specopsutilitybelt": "Spec-Ops Utility Belt",
+  "item.ponpo.bookbag": "Book Bag",
+  "item.ponpo.clothbag": "Cloth Bag",
+  "item.ponpo.daybag": "Day Bag",
+  "item.ponpo.drawstringbag": "Drawstring Bag",
+  "item.ponpo.handmadeknapsack": "Handmade Knapsack",
+  "item.ponpo.hikingpack": "Hiking Pack",
+  "item.ponpo.leatherbag": "Leather Bag",
+  "item.ponpo.militarybag": "Military Bag",
+  "item.ponpo.reinforcedleatherbag": "Reinforced Leather Bag",
+  "item.ponpo.specopsbag": "Spec-Ops Bag",
+  "item.ponpo.toolbelt": "Tool Belt",
+  "item.ponpo.toolbox": "Toolbox",
+  "item.ponpo.catbag": "Cat Bag",
+  "item.ponpo.catpouch": "Cat Pouch",
+  "creativetab.ponpo": "Packs N' Pouches"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern":[
+    "#o",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_wool"
+    },
+    "o": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "ponpo:handmadeknapsack"
+  }
+}
