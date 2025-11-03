@@ -39,7 +39,7 @@ public class LargePouchCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, hslots,"hotbarslotsM",uuid, largePouchSlots, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, hslots,"hotbarslotsLargePouch",null, largePouchSlots, AttributeModifier.Operation.ADDITION,"belt");
 
 
                 return atts;

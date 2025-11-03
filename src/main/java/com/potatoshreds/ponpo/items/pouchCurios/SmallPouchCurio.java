@@ -39,7 +39,7 @@ public class SmallPouchCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, hslots,"hotbarslotsS",uuid,smallPouchSlots, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack, hslots,"hotbarslotsSmallPouch",null,smallPouchSlots, AttributeModifier.Operation.ADDITION,"belt");
 
                 return atts;
             }

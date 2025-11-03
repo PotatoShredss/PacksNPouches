@@ -39,7 +39,7 @@ public class ClothBagCurio extends Item{
 
                 Attribute slots = ModAttributes.SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,clothBagStorage, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",null,clothBagStorage, AttributeModifier.Operation.ADDITION,"back");
 
 
                 return atts;

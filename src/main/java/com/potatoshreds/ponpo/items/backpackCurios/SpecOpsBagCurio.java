@@ -41,9 +41,9 @@ public class SpecOpsBagCurio extends Item{
                 Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,specOpsBagStorage, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",null,specOpsBagStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, specOpsBagSlots, AttributeModifier.Operation.ADDITION, "back");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", null, specOpsBagSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

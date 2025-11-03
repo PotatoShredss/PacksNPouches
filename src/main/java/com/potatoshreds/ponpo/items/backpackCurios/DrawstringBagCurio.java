@@ -37,7 +37,7 @@ public class DrawstringBagCurio extends Item{
 
                 Attribute slots = ModAttributes.SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,9, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",null,9, AttributeModifier.Operation.ADDITION,"back");
 
                 return atts;
             }

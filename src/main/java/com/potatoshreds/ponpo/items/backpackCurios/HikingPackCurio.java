@@ -41,9 +41,9 @@ public class HikingPackCurio extends Item{
                 Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots", uuid, hikingPackStorage, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots", null, hikingPackStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, hikingPackSlots, AttributeModifier.Operation.ADDITION, "back");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", null, hikingPackSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

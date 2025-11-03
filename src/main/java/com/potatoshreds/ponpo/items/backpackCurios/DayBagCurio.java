@@ -41,9 +41,9 @@ public class DayBagCurio extends Item{
                 Attribute slots = ModAttributes.SLOTS.get();
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, slots,"inventoryslots",uuid,dayBagStorage, AttributeModifier.Operation.ADDITION,"back");
+                CuriosApi.addModifier(stack, slots,"inventoryslots",null,dayBagStorage, AttributeModifier.Operation.ADDITION,"back");
 
-                CuriosApi.addModifier(stack, hslots, "hotbarslots", uuid, dayBagSlots, AttributeModifier.Operation.ADDITION, "back");
+                CuriosApi.addModifier(stack, hslots, "hotbarslots", null, dayBagSlots, AttributeModifier.Operation.ADDITION, "back");
 
                 return atts;
             }

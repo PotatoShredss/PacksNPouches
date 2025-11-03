@@ -40,9 +40,9 @@ public class SpecOpsUtilityBeltCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack,hslots,"hotbarslotsSP",uuid,specOpsUtilityBeltSlots, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack,hslots,"hotbarslotsSPBelt",null,specOpsUtilityBeltSlots, AttributeModifier.Operation.ADDITION,"belt");
 
-                CuriosApi.addSlotModifier(stack, "belt", "SPslots", uuid, specOpsUtilityBeltRestriction, AttributeModifier.Operation.ADDITION, "belt");
+                CuriosApi.addSlotModifier(stack, "belt", "SPslotsSpec", null, specOpsUtilityBeltRestriction, AttributeModifier.Operation.ADDITION, "belt");
 
                 return atts;
             }

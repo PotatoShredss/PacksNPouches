@@ -46,8 +46,8 @@ public class CatPouchCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack, hslots,"hotbarslots", uuid, catPouchSlots, AttributeModifier.Operation.ADDITION,"belt");
 
+                CuriosApi.addModifier(stack, hslots,"hotbarslotsCatPouch", null, catPouchSlots, AttributeModifier.Operation.ADDITION,"belt");
 
                 return atts;
             }

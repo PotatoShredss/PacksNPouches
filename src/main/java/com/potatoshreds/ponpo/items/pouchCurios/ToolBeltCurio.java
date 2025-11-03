@@ -40,9 +40,9 @@ public class ToolBeltCurio extends Item{
 
                 Attribute hslots = ModAttributes.HOTBAR_SLOTS.get();
 
-                CuriosApi.addModifier(stack,hslots,"hotbarslotsSP",uuid,toolBeltSlots, AttributeModifier.Operation.ADDITION,"belt");
+                CuriosApi.addModifier(stack,hslots,"hotbarslotsToolBelt",null,toolBeltSlots, AttributeModifier.Operation.ADDITION,"belt");
 
-                CuriosApi.addSlotModifier(stack, "belt", "SPslots", uuid, toolBeltRestriction, AttributeModifier.Operation.ADDITION, "belt");
+                CuriosApi.addSlotModifier(stack, "belt", "SPslotsTool", null, toolBeltRestriction, AttributeModifier.Operation.ADDITION, "belt");
 
                 return atts;
             }
